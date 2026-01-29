@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Gửi đến cậu 💌</title>
+  <style>
+    body {
+      background: #ffe4ec;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+    }
+    #yes { background: #ff5e8e; color: white; }
+    #no { background: #ddd; position: absolute; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Bạn ơi cho mình xin lỗi được không? 🥺</h2>
+  <button id="yes">Tha lỗi 💖</button>
+  <button id="no">Không 😤</button>
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  noBtn.addEventListener("mouseover", () => {
+    noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+  });
+
+  document.getElementById("yes").onclick = () => {
+    alert("mình hứa sẽ không làm bạn buồn nữa 💗");
+  };
+</script>
+
+</body>
+</html>
